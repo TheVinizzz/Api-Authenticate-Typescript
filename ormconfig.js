@@ -9,7 +9,7 @@ module.exports = {
        "src/app/models/*.js"
     ],
     "migrations": [
-        "src/database/migrations/*.js"
+        "src/database/migrations/*.entity.{ts,js}"
     ],
     "cli": {
         "migrationsDir": "src/database/migrations"
