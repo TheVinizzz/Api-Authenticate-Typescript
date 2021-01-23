@@ -10,7 +10,7 @@ class UserController {
 
    async store(req: Request, res: Response) {
        try{
-        const repository = getRepository(User)
+        const repository = getRepository<User>(User)
         const {email, password} = req.body
 
         const userExists = await repository.findOne({ where: { email } })
