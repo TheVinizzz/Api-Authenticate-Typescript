@@ -25,7 +25,7 @@ class UserController {
         return res.json(user)
        }
         catch(err) {
-            throw new Error(err)
+            res.send(err.message)
         }
     }
 }
