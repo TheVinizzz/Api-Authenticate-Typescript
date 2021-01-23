@@ -6,7 +6,7 @@ module.exports = {
     "password": process.env.API_PASSWORD,
     "database": process.env.API_DATABASE,
     "entities": [
-       "src/app/models/*.ts"
+       "src/app/models/*.*"
     ],
     "migrations": [
         "src/database/migrations/*.ts"
