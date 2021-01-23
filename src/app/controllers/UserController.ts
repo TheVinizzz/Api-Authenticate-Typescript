@@ -9,6 +9,7 @@ class UserController {
     }
 
    async store(req: Request, res: Response) {
+       try{
         const repository = getRepository(User)
         const {email, password} = req.body
 
@@ -22,6 +23,10 @@ class UserController {
         await repository.save(user)
         
         return res.json(user)
+       }
+        catch(err) {
+            throw new Error(err)
+        }
     }
 }
 
