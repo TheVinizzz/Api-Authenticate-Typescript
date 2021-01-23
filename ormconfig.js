@@ -6,10 +6,10 @@ module.exports = {
     "password": process.env.API_PASSWORD,
     "database": process.env.API_DATABASE,
     "entities": [
-       "src/app/models/*.js"
+       "src/app/models/*.entity.{ts,js}"
     ],
     "migrations": [
-        "src/database/migrations/*.entity.{ts,js}"
+        "src/database/migrations/*.{ts,js}"
     ],
     "cli": {
         "migrationsDir": "src/database/migrations"
