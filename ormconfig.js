@@ -1,3 +1,5 @@
+console.log('process.env.DATABASEE_URL :>> ', process.env.API_ROUTE_AUTHENTICATE)
+
 module.exports = {
     "type": "postgres",
     "host": process.env.API_ROUTE_AUTHENTICATE,
@@ -12,6 +14,9 @@ module.exports = {
         "./dist/database/migrations/*{.ts,.js}"
     ],
     "cli": {
-        "migrationsDir": "src/database/migrations"
+        "migrationsDir":[
+            "src/database/migrations/"
+          ],
+          "entitiesDir": "src/app/models"
     }
 }
